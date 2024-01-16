@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Form Submission Result</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Form Submission Result</h2>
+        <p>Name: {{ form_data.name }}</p>
+        <p>Email: {{ form_data.email }}</p>
+        <p>Message: {{ form_data.message }}</p>
+        <p>Option: {{ form_data.get('option', 'Not selected') }}</p>
+        <p>Checkbox 1: {{ 'Yes' if form_data.get('checkbox1') else 'No' }}</p>
+        <p>Checkbox 2: {{ 'Yes' if form_data.get('checkbox2') else 'No' }}</p>
+        <a href="/">Back to Form</a>
+    </div>
+</body>
+</html>
